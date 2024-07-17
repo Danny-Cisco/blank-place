@@ -2,7 +2,7 @@
 	// Define any needed logic here
 </script>
 
-<nav class="w-full flex justify-around items-center p-4 shadow-lg">
+<nav class="w-full flex justify-around items-center py-4 shadow-lg">
 	<a href="/plus" class="bg-gray-400 text-white py-2 px-4 rounded-full text-center">+</a>
 	<a href="/in" class="bg-gray-400 text-white py-2 px-4 rounded-full text-center">IN</a>
 	<a href="/do" class="bg-gray-400 text-white py-2 px-4 rounded-full text-center">DO</a>
@@ -15,10 +15,10 @@
 <style>
 	nav {
 		z-index: 10;
+		gap: 10px;
 	}
 	a {
 		flex: 1;
-		margin-inline: 10px;
 		text-decoration: none;
 		display: flex;
 		justify-content: center;
