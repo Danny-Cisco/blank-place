@@ -8,7 +8,7 @@
 </script>
 
 <h2 class="font-bold mb-2 text-center">Contains</h2>
-<div class="mb-2">
+<div class="mb-2 min-w-[200px]">
 	<input
 		type="text"
 		placeholder="Contains"

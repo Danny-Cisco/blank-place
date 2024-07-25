@@ -6,9 +6,8 @@
 	$: selection = includesFiles ? 'ALL' : 'No Files';
 </script>
 
-<div class="dropdown w-[160px]">
+<div class="dropdown w-[130px]">
 	<div class="dropdown-content">
-		<h2 class="font-bold text-lg mb-4 text-center">Include&nbspFiles</h2>
 		<label>
 			<input type="radio" bind:group={includesFiles} value={true} />
 			Include

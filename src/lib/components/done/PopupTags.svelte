@@ -12,7 +12,7 @@
 	} else selection = 'ALL';
 </script>
 
-<h2 class="font-bold mb-2 text-center">Contains</h2>
+<h2 class="font-bold mb-2 w-[200px] text-center">Contains</h2>
 <div class="mb-2">
 	<input
 		type="text"

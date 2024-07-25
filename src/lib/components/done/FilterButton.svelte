@@ -44,7 +44,7 @@
 <div class="relative">
 	<button
 		on:click={handleClick}
-		class="bg-orange-500 text-white text-sm rounded-full whitespace-pre-line max-w-full px-3 py-2 min-w-[110px]"
+		class={`text-white text-sm rounded-full whitespace-pre-line max-w-full px-3 py-2 min-w-[110px]  ${selection === 'ALL' ? ' bg-orange-500 ' : ' bg-red-500 '}`}
 	>
 		{selection}</button
 	>
