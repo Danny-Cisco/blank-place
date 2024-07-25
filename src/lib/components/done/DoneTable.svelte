@@ -6,7 +6,7 @@
 </script>
 
 <div class="p-2 w-full">
-	<div class="rounded-3xl border-[3px] w-full overflow-auto border-black/20">
+	<div class=" w-full border-black/20">
 		<div class="">
 			<HeaderRow />
 			{#each data.records as record}

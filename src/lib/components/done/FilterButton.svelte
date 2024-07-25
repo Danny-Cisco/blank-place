@@ -14,6 +14,6 @@
 		{selection}</button
 	>
 	{#if showPopup}
-		<Popup />
+		<Popup {column} />
 	{/if}
 </div>
