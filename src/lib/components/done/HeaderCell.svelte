@@ -4,7 +4,9 @@
 </script>
 
 <div class="header-cell flex flex-col">
-	{column}
+	<div class="mb-4 text-2xl font-bold">
+		{column}
+	</div>
 	<FilterButton {column} />
 </div>
 

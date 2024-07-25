@@ -2,9 +2,11 @@
 	import HeaderCell from './HeaderCell.svelte';
 </script>
 
-<div class="grid grid-cols-6">
+<div class="grid grid-cols-8">
 	<HeaderCell column="When" />
-	<HeaderCell column="Short" />
+	<div class="col-span-3">
+		<HeaderCell column="Short" />
+	</div>
 	<HeaderCell column="Type" />
 	<HeaderCell column="Who" />
 	<HeaderCell column="Tags" />

@@ -1,7 +1,6 @@
 <script>
 	export let column;
+	let selection = 'All';
 </script>
 
-<button class="bg-blue-500 text-white rounded-xl px-3">
-	{column}
-</button>
+<button class="bg-orange-500 text-white rounded-xl max-w-[100px] px-3"> {selection}</button>
