@@ -2,11 +2,12 @@
 	import PopupShort from './PopupShort.svelte';
 	import PopupWhen from './PopupWhen.svelte';
 	export let column;
+	export let selection = '';
 </script>
 
 <div class="bg-gray-200 text-black p-4 absolute top-[30px] rounded-md left-[-5px]">
 	{#if column === 'When'}
-		<PopupWhen />
+		<PopupWhen bind:selection />
 	{:else if column === 'Short'}
 		<PopupShort />
 	{/if}

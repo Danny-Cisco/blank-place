@@ -1,8 +1,11 @@
 <script>
+	export let selection;
 	let sortOrder = 'LIFO'; // default selection for sort order
 	let filterType = 'ALL'; // default selection for filter type
 	let startDate = '';
 	let endDate = '';
+
+	$: selection = sortOrder + '-' + filterType;
 </script>
 
 <div class="w-[300px]">
@@ -28,10 +31,10 @@
 	</div>
 	<div class="mb-2">
 		<label class="flex items-center">
-			<input type="radio" name="filterType" value="Between" bind:group={filterType} class="mr-2" />
-			Between
+			<input type="radio" name="filterType" value="Dates" bind:group={filterType} class="mr-2" />
+			Dates
 		</label>
-		{#if filterType === 'Between'}
+		{#if filterType === 'Dates'}
 			<div class="mt-2">
 				<input
 					type="text"

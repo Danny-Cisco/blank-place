@@ -1,38 +1,56 @@
 <script>
 	import PopupContainer from './PopupContainer.svelte';
-	import { createEventDispatcher } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 
 	export let column;
-	let selection = 'All';
+	let selection = 'ALL';
 	export let showPopup = false;
 
-	let activePopup = null;
+	let popupRef;
+
+	let handleOutsideClick;
 
 	function handleClick() {
-		showPopup = !showPopup;
-	}
-
-	const dispatcher = createEventDispatcher();
-
-	function handlePopup(column) {
-		if (activePopup === column) {
-			activePopup = null;
-		} else {
-			activePopup = column;
+		if (typeof document !== 'undefined') {
+			showPopup = !showPopup;
+			if (showPopup) {
+				// Attach click event listener to close popup on outside click
+				document.addEventListener('click', handleOutsideClick, true);
+			} else {
+				// Remove event listener if popup is not shown
+				document.removeEventListener('click', handleOutsideClick, true);
+			}
 		}
 	}
 
-	// Listen for the custom event to close all popups
-	function closeAllPopups() {
-		activePopup = null;
-	}
+	onMount(() => {
+		// Define the event handler inside onMount to ensure it's only available in the browser
+		handleOutsideClick = (event) => {
+			if (popupRef && !popupRef.contains(event.target)) {
+				showPopup = false;
+				document.removeEventListener('click', handleOutsideClick, true);
+			}
+		};
+	});
+
+	onDestroy(() => {
+		// Clean up the event listener when the component is destroyed
+		if (typeof document !== 'undefined') {
+			document.removeEventListener('click', handleOutsideClick, true);
+		}
+	});
 </script>
 
 <div class="relative">
-	<button on:click={handleClick} class="bg-orange-500 text-white rounded-xl max-w-[100px] px-3">
+	<button
+		on:click={handleClick}
+		class="bg-orange-500 text-white text-sm rounded-xl whitespace-pre-line max-w-[100px] px-1 min-w-[100px]"
+	>
 		{selection}</button
 	>
 	{#if showPopup}
-		<PopupContainer {column} />
+		<div bind:this={popupRef}>
+			<PopupContainer {column} bind:selection />
+		</div>
 	{/if}
 </div>
