@@ -1,6 +1,7 @@
 <script>
 	import PopupShort from './PopupShort.svelte';
 	import PopupWhen from './PopupWhen.svelte';
+	import PopupType from './PopupType.svelte';
 	export let column;
 	export let selection = '';
 </script>
@@ -10,6 +11,8 @@
 		<PopupWhen bind:selection />
 	{:else if column === 'Short'}
 		<PopupShort bind:selection />
+	{:else if column === 'Type'}
+		<PopupType bind:selection />
 	{/if}
 </div>
 

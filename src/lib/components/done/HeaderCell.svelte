@@ -3,7 +3,7 @@
 	export let column;
 </script>
 
-<div class="header-cell flex flex-col">
+<div class="header-cell flex h-full flex-col">
 	<div class="mb-4 text-2xl font-bold">
 		{column}
 	</div>
