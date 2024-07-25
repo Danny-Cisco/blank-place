@@ -1,6 +1,15 @@
 <script>
+	export let selection;
 	let containsText = '';
 	let orText = '';
+
+	$: if (containsText && orText) {
+		selection = containsText + ' OR ' + orText;
+	} else if (containsText) {
+		selection = containsText;
+	} else if (orText) {
+		selection = orText;
+	} else selection = 'ALL';
 </script>
 
 <h2 class="font-bold mb-2 text-center">Contains</h2>

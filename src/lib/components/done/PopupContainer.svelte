@@ -9,7 +9,7 @@
 	{#if column === 'When'}
 		<PopupWhen bind:selection />
 	{:else if column === 'Short'}
-		<PopupShort />
+		<PopupShort bind:selection />
 	{/if}
 </div>
 
