@@ -1,4 +1,4 @@
-<div class="body-cell">
+<div class="body-cell h-full max-h-[100px] overflow-x-auto">
 	<slot></slot>
 </div>
 
