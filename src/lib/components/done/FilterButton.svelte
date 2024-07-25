@@ -44,7 +44,7 @@
 <div class="relative">
 	<button
 		on:click={handleClick}
-		class="bg-orange-500 text-white text-sm rounded-xl whitespace-pre-line max-w-[100px] px-1 min-w-[100px]"
+		class="bg-orange-500 text-white text-sm rounded-xl whitespace-pre-line max-w-[150px] px-1 py-2 min-w-[110px]"
 	>
 		{selection}</button
 	>

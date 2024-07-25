@@ -31,10 +31,10 @@
 	</div>
 	<div class="mb-2">
 		<label class="flex items-center">
-			<input type="radio" name="filterType" value="Dates" bind:group={filterType} class="mr-2" />
-			Dates
+			<input type="radio" name="filterType" value="Between" bind:group={filterType} class="mr-2" />
+			Between
 		</label>
-		{#if filterType === 'Dates'}
+		{#if filterType === 'Between'}
 			<div class="mt-2">
 				<input
 					type="text"
