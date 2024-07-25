@@ -4,6 +4,7 @@
 	import PopupType from './PopupType.svelte';
 	import PopupWho from './PopupWho.svelte';
 	import PopupTags from './PopupTags.svelte';
+	import PopupFile from './PopupFile.svelte';
 	export let column;
 	export let selection = '';
 </script>
@@ -19,6 +20,8 @@
 		<PopupWho bind:selection />
 	{:else if column === 'Tags'}
 		<PopupTags bind:selection />
+	{:else if column === 'File'}
+		<PopupFile bind:selection />
 	{/if}
 </div>
 
