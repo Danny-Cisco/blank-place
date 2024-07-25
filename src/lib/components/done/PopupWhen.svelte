@@ -9,7 +9,7 @@
 </script>
 
 <div class="w-[300px]">
-	<h2 class="font-bold mb-3 text-xl text-center">Sort Order</h2>
+	<h2 class="font-bold mb-3 text-lg text-center">Sort Order</h2>
 	<div class="mb-2">
 		<label class="flex items-center">
 			<input type="radio" name="sortOrder" value="LIFO" bind:group={sortOrder} class="mr-2" />

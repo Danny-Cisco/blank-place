@@ -36,7 +36,7 @@
 
 <div class="dropdown w-[250px]">
 	<div class="dropdown-content">
-		<h2 class="font-bold text-xl mb-4 text-center">Include&nbsp(Select)</h2>
+		<h2 class="font-bold text-lg mb-4 text-center">Include&nbsp(Select)</h2>
 		<div class="flex justify-between">
 			<label>
 				<input type="radio" bind:group={mode} value="ALL" />
