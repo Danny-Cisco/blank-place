@@ -5,7 +5,7 @@
 	export let selection = '';
 </script>
 
-<div class="bg-gray-200 text-black p-4 absolute top-[40px] rounded-md left-[-5px]">
+<div class="bg-gray-200 text-black p-4 absolute top-[40px] shadow-2xl rounded-xl left-[-5px]">
 	{#if column === 'When'}
 		<PopupWhen bind:selection />
 	{:else if column === 'Short'}
