@@ -18,11 +18,11 @@
 	}
 
 	// Optional: Scroll to top on navigation
-	onMount(() => {
-		$page.subscribe(() => {
-			window.scrollTo(0, 0);
-		});
-	});
+	// onMount(() => {
+	// 	$page.subscribe(() => {
+	// 		window.scrollTo(0, 0);
+	// 	});
+	// });
 </script>
 
 <nav class="w-full flex justify-around items-center py-4 shadow-lg">
