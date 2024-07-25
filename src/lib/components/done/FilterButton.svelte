@@ -1,11 +1,30 @@
 <script>
-	import Popup from './Popup.svelte';
+	import PopupContainer from './PopupContainer.svelte';
+	import { createEventDispatcher } from 'svelte';
+
 	export let column;
 	let selection = 'All';
 	export let showPopup = false;
 
+	let activePopup = null;
+
 	function handleClick() {
 		showPopup = !showPopup;
+	}
+
+	const dispatcher = createEventDispatcher();
+
+	function handlePopup(column) {
+		if (activePopup === column) {
+			activePopup = null;
+		} else {
+			activePopup = column;
+		}
+	}
+
+	// Listen for the custom event to close all popups
+	function closeAllPopups() {
+		activePopup = null;
 	}
 </script>
 
@@ -14,6 +33,6 @@
 		{selection}</button
 	>
 	{#if showPopup}
-		<Popup {column} />
+		<PopupContainer {column} />
 	{/if}
 </div>
