@@ -2,6 +2,8 @@
 	import PopupShort from './PopupShort.svelte';
 	import PopupWhen from './PopupWhen.svelte';
 	import PopupType from './PopupType.svelte';
+	import PopupWho from './PopupWho.svelte';
+	import PopupTags from './PopupTags.svelte';
 	export let column;
 	export let selection = '';
 </script>
@@ -13,6 +15,10 @@
 		<PopupShort bind:selection />
 	{:else if column === 'Type'}
 		<PopupType bind:selection />
+	{:else if column === 'Who'}
+		<PopupWho bind:selection />
+	{:else if column === 'Tags'}
+		<PopupTags bind:selection />
 	{/if}
 </div>
 
