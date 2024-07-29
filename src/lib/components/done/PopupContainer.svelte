@@ -7,9 +7,15 @@
 	import PopupFile from './PopupFile.svelte';
 	export let column;
 	export let selection = '';
+
+	function getData() {
+		console.log('GETTING DATA...', selection);
+	}
+
+	$: if (selection) getData(); // This will call getData whenever selection changes
 </script>
 
-<div class="bg-gray-200 text-black p-4 absolute top-[40px] shadow-2xl rounded-xl left-[-5px]">
+<div class="bg-gray-200 text-black p-4 absolute top-[40px] shadow-lg rounded-xl left-[-30px]">
 	{#if column === 'When'}
 		<PopupWhen bind:selection />
 	{:else if column === 'Short'}
@@ -29,10 +35,10 @@
 	.absolute {
 		position: absolute;
 	}
-	.top-\[30px\] {
-		top: 30px;
+	.top-\[40px\] {
+		top: 40px;
 	}
-	.left-\[-5px\] {
-		left: -5px;
+	.left-\[-30px\] {
+		left: -30px;
 	}
 </style>

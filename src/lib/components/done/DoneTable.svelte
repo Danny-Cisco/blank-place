@@ -1,8 +1,13 @@
 <script>
+	import { onMount } from 'svelte';
 	import HeaderRow from './HeaderRow.svelte';
 	import BodyRow from './BodyRow.svelte';
 
 	export let data = { records: [] };
+
+	onMount(() => {
+		alert("Open console to see 'getData' triggers");
+	});
 </script>
 
 <div class="p-2 w-full">
