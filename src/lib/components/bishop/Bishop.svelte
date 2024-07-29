@@ -85,7 +85,7 @@
 			formData.append('text', conversationHistory);
 
 			// Send the question to your backend/API
-			const response = await fetch('?/askQuestionGPT3', {
+			const response = await fetch('/api/openai/askQuestionGPT3', {
 				method: 'POST',
 				body: formData
 			});
@@ -93,7 +93,7 @@
 			const result = await response.json(); // Parse the JSON response
 
 			if (response.ok) {
-				let responseData = decodeHtml(result.data); // Decode HTML entities in the response
+				let responseData = decodeHtml(result.summary); // Decode HTML entities in the response
 				let formattedResponse = responseData.replace(/\\n/g, '<br>'); // Replace newline characters with HTML line breaks
 
 				// Use marked.js to parse Markdown in the response and DOMPurify to sanitize it
@@ -102,7 +102,7 @@
 					`<a href="${href}" title="${title}" class="font-bold text-blue-500">${text}</a>`;
 				marked.setOptions({ renderer });
 
-				let parsedResponse = marked.parse(formattedResponse.slice(2, -2)); // Parse and slice the response string to fit your needs
+				let parsedResponse = marked.parse(formattedResponse); // Parse the response string
 				let cleanedResponse = DOMPurify.sanitize(parsedResponse, {
 					ADD_ATTR: ['class']
 				});
