@@ -140,26 +140,29 @@
 	$: reversedChatMessages = [...chatMessages].reverse();
 </script>
 
-<div class="flex flex-col max-h-[92%] rounded-xl">
-	<div class="flex flex-col max-h-[100%] h-full mt-2 overflow-auto" bind:this={chatContainer}>
-		<div class="flex flex-col items-stretch justify-end flex-grow chat-container">
+<div class=" grid grid-rows-2 rounded-xl">
+	<div class=" flex flex-col h-full overflow-y-auto mt-2" bind:this={chatContainer}>
+		<div class="flex flex-col items-stretch justify-end flex-grow">
 			<div class="p-2 space-y-4">
 				{#each chatMessages as message, index (index)}
 					<div
-						class={`flex items-end space-x-2 rounded-xl ${
-							message.type === 'question' ? 'justify-start ' : 'justify-end flex-row-reverse'
-						} transition-all duration-600`}
+						class={`flex items-start  space-x-2 border-b-[1px] border-black/50 jsutify-start 
+						 transition-all duration-600`}
 					>
-						<div class="chat-image avatar mb-[4px]">
-							<div class="w-10 h-10 rounded-full">
-								<img src={message.avatar} alt="Avatar" />
+						{#if message.type !== 'question'}
+							<div class="chat-image avatar mb-[4px]">
+								<div class="w-10 h-10 rounded-full">
+									<!-- <img src={message.avatar} alt="Avatar" /> -->
+									<img src="/bishop_avatar.png" alt="Avatar" />
+								</div>
 							</div>
-						</div>
+						{:else}
+							<div class="w-[40px]"></div>{/if}
 						<div
 							class={` safe-html ${
 								message.type === 'question'
-									? 'bg-primary rounded-bl-0 rounded-br-xl rounded-tl-xl rounded-tr-xl'
-									: 'bg-secondary rounded-br-0 rounded-bl-xl rounded-tr-xl rounded-tl-xl'
+									? 'rounded-bl-0 rounded-br-xl font-bold rounded-tl-xl rounded-tr-xl'
+									: 'rounded-br-0 rounded-bl-xl rounded-tr-xl rounded-tl-xl'
 							} p-3  max-w-3/4 min-w-1/2 transition-transform duration-200 `}
 						>
 							{@html message.text}
@@ -194,7 +197,8 @@
 </div>
 
 <style>
-	.chat-container {
-		margin-bottom: 1rem;
+	.grid {
+		grid-template-rows: auto 80px;
+		height: 85vh;
 	}
 </style>

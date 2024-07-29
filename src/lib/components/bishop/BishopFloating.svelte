@@ -17,11 +17,11 @@
 			class="flex overflow-hidden flex-col h-[90vh] w-[400px] rounded-2xl border-2 shadow-lg bg-white items-stretch justify-between"
 			transition:fly={{ y: '-100%', duration: 300 }}
 		>
-			<div class="flex items-center justify-center">
-				<img src="/default_avatar.png" alt="Avatar" class="w-12 h-12" />
+			<div class="flex items-center h-[50px] justify-center">
+				<img src="/bishop_avatar.png" alt="Avatar" class="w-12 h-12" />
 				<div class="text-center text-gray-300">BISHOP</div>
 			</div>
-			<div class="text-black">
+			<div class="text-black h-full">
 				<Bishop />
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 			</div>
 		{:else}
 			<div class="rounded-full bg-white">
-				<img src="/default_avatar.png" alt="Avatar" class="w-12 h-12" />
+				<img src="/bishop_avatar.png" alt="Avatar" class="w-12 h-12" />
 			</div>
 		{/if}
 	</button>
