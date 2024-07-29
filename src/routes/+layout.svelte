@@ -3,6 +3,7 @@
 
 	import BottomNav from '$lib/components/BottomNav.svelte';
 	import TopBar from '$lib/components/topBar/TopBar.svelte';
+	import BishopFloating from '$lib/components/bishop/BishopFloating.svelte';
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
@@ -19,3 +20,4 @@
 	</div>
 	<BottomNav />
 </div>
+<BishopFloating />

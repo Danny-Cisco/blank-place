@@ -1,1 +1,7 @@
-<h1 class="text-xxl font-bold mb-8">Bishop Page</h1>
+<script>
+	import Bishop from '$lib/components/bishop/Bishop.svelte';
+</script>
+
+<div class="flex items-center justify-center mt-1">
+	<Bishop />
+</div>
