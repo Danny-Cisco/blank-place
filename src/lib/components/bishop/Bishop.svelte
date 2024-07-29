@@ -3,6 +3,8 @@
 	import { onMount, afterUpdate } from 'svelte';
 	import { marked } from 'marked';
 	import DOMPurify from 'dompurify';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 	import { chatMessagesStore } from '$lib/stores/chatStore.js';
 
@@ -185,8 +187,8 @@
 				/>
 				<button
 					type="submit"
-					class="rounded-full border-[1px] font-bold p-2 border-black"
-					disabled={isLoading}>Ask</button
+					class="rounded-full border-[1px] font-bold w-[40px] h-[40px] text-xl border-black"
+					disabled={isLoading}><FontAwesomeIcon icon={faArrowUp} /></button
 				>
 			</div>
 		</form>
