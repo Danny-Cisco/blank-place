@@ -140,7 +140,7 @@
 	$: reversedChatMessages = [...chatMessages].reverse();
 </script>
 
-<div class=" grid grid-rows-2 rounded-xl">
+<div class=" grid grid-rows-2 rounded-xl w-full">
 	<div class=" flex flex-col h-full overflow-y-auto mt-2" bind:this={chatContainer}>
 		<div class="flex flex-col items-stretch justify-end flex-grow">
 			<div class="p-2 space-y-4">
@@ -173,14 +173,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="w-full p-4">
+	<div class="w-full p-4 mx-auto">
 		<form class="form-class" on:submit|preventDefault={handleQuestion}>
 			<div class="flex items-center space-x-2">
 				<input
 					type="text"
 					bind:value={text}
 					placeholder="Enter your question..."
-					class="w-full max-w-xs input input-bordered input-warning"
+					class="w-full input flex-1 input-bordered input-warning"
 					on:keydown={handleEnter}
 				/>
 				<button
