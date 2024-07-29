@@ -11,7 +11,7 @@
 	}
 </script>
 
-<div class="absolute isolate z-50 right-[5px]">
+<div class="absolute isolate z-50 right-2 top-2">
 	{#if isExpanded}
 		<div
 			class="flex overflow-hidden flex-col h-[90vh] w-[400px] rounded-2xl border-2 shadow-lg bg-white items-stretch justify-between"
@@ -21,11 +21,13 @@
 				<img src="/default_avatar.png" alt="Avatar" class="w-12 h-12" />
 				<div class="text-center text-gray-300">BISHOP</div>
 			</div>
-			<Bishop />
+			<div class="text-black">
+				<Bishop />
+			</div>
 		</div>
 	{/if}
 	<button
-		class="fixed btn btn-secondary marker:btn-outline top-0 right-[-4px]"
+		class="fixed btn btn-secondary marker:btn-outline top-[8px] right-[-4px]"
 		on:click={toggleExpansion}
 	>
 		{#if isExpanded}

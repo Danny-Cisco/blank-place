@@ -152,7 +152,7 @@
 					>
 						<div class="chat-image avatar mb-[4px]">
 							<div class="w-10 h-10 rounded-full">
-								<img src={message.avatar} alt="Avatar" class="shadow-lg" />
+								<img src={message.avatar} alt="Avatar" />
 							</div>
 						</div>
 						<div
@@ -160,7 +160,7 @@
 								message.type === 'question'
 									? 'bg-primary rounded-bl-0 rounded-br-xl rounded-tl-xl rounded-tr-xl'
 									: 'bg-secondary rounded-br-0 rounded-bl-xl rounded-tr-xl rounded-tl-xl'
-							} p-3 shadow  max-w-3/4 min-w-1/2 transition-transform duration-200 `}
+							} p-3  max-w-3/4 min-w-1/2 transition-transform duration-200 `}
 						>
 							{@html message.text}
 							<!-- Render HTML here -->
@@ -180,7 +180,11 @@
 					class="w-full max-w-xs input input-bordered input-warning"
 					on:keydown={handleEnter}
 				/>
-				<button type="submit" class="btn btn-primary" disabled={isLoading}>Ask</button>
+				<button
+					type="submit"
+					class="rounded-full border-[1px] font-bold p-2 border-black"
+					disabled={isLoading}>Ask</button
+				>
 			</div>
 		</form>
 		{#if error}
