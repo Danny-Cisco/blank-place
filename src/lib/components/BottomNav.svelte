@@ -25,7 +25,7 @@
 	// });
 </script>
 
-<nav class="w-full flex justify-around items-center py-4 shadow-lg">
+<nav class="w-full flex justify-around items-center pt-2 pb-4 shadow-lg">
 	<a
 		href="/plus"
 		class="{activeRoute === '/plus' ? 'active' : ''} nav-item"
