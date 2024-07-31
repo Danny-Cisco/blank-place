@@ -144,7 +144,7 @@
 
 <div class=" grid grid-rows-2 rounded-xl w-full">
 	<div class=" flex flex-col h-full overflow-y-auto mt-2" bind:this={chatContainer}>
-		<div class="flex flex-col items-stretch justify-end flex-grow">
+		<div class="flex flex-col items-stretch justify-end flex-1">
 			<div class="p-2 space-y-4">
 				{#each chatMessages as message, index (index)}
 					<div
@@ -175,7 +175,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="w-full p-4 mx-auto">
+	<div class="w-full p-4 mb-4 mx-auto">
 		<form class="form-class" on:submit|preventDefault={handleQuestion}>
 			<div class="flex items-center space-x-2">
 				<input
@@ -200,7 +200,7 @@
 
 <style>
 	.grid {
-		grid-template-rows: auto 80px;
-		height: 85vh;
+		grid-template-rows: auto 5em;
+		height: 100%;
 	}
 </style>

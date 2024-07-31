@@ -11,10 +11,10 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
-<div class="relative h-full flex flex-col pt-2 px-4">
+<div class="relative max-h-[100vh] min-h-[100vh] flex flex-col pt-2 px-4">
 	<TopBar />
 	<div
-		class="flex-1 mt-2 mx-auto w-full flex flex-col justify-start text-black items-center bg-white rounded-3xl"
+		class="flex-1 mt-2 mx-auto w-full max-h-[85vh] flex flex-col overflow-hidden justify-start text-black items-center bg-white rounded-3xl"
 	>
 		<slot />
 	</div>

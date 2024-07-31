@@ -11,17 +11,19 @@
 	}
 </script>
 
-<div class="absolute isolate z-50 right-2 top-2">
+<div class="absolute text-black isolate z-50 right-2 top-2">
 	{#if isExpanded}
 		<div
-			class="flex overflow-hidden flex-col h-[90vh] w-[400px] rounded-2xl border-2 shadow-lg bg-white items-stretch justify-between"
+			class="flex max-h-[90vh] min-h-[90vh] relative flex-col w-[400px] rounded-2xl border-2 shadow-lg bg-white items-stretch justify-between"
 			transition:fly={{ y: '-100%', duration: 300 }}
 		>
+			<!-- titlebar of Bishop window -->
 			<div class="flex items-center h-[50px] justify-center">
 				<img src="/bishop_avatar.png" alt="Avatar" class="w-12 h-12" />
 				<div class="text-center text-gray-300">BISHOP</div>
 			</div>
-			<div class="text-black h-full">
+			<div class="flex-1"></div>
+			<div class="absolute top-8 bottom-0 left-0 right-0">
 				<Bishop />
 			</div>
 		</div>
