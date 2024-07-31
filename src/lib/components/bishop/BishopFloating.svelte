@@ -23,7 +23,7 @@
 				<div class="text-center text-gray-300">BISHOP</div>
 			</div>
 			<div class="flex-1"></div>
-			<div class="absolute top-8 bottom-0 left-0 right-0">
+			<div class="absolute top-12 bottom-0 left-0 right-0">
 				<Bishop />
 			</div>
 		</div>
