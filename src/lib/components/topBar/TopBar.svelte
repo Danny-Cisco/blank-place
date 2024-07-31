@@ -11,4 +11,5 @@
 	<div class="flex-1">
 		<SearchBar />
 	</div>
+	<div class="w-[56px]"></div>
 </div>

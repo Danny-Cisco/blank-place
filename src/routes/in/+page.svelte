@@ -1,1 +1,1 @@
-<h1 class="text-xxl font-bold mb-8">In Page</h1>
+<h1 class="text-xxl font-bold my-8">In Page</h1>
