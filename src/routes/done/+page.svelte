@@ -8,15 +8,15 @@
 				type: 'Meeting',
 				who: 'John Doe',
 				tags: ['Tag1', 'Tag2'],
-				file: 'file-a.pdf'
+				file_url: 'file-a.pdf'
 			},
 			{
-				When: '2024-07-26',
+				when: '2024-07-26',
 				short: 'Event B',
 				type: 'Workshop',
 				who: 'Jane Smith',
 				tags: ['Tag3', 'Tag4'],
-				file: 'file-b.pdf'
+				file_url: 'file-b.pdf'
 			}
 		]
 	};
