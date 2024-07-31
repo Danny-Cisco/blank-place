@@ -5,18 +5,18 @@
 </script>
 
 <div class="grid grid-cols-8">
-	<BodyCell>{record.When}</BodyCell>
+	<BodyCell>{record.when}</BodyCell>
 	<div class="col-span-3 h-full">
-		<BodyCell>{record.Short}</BodyCell>
+		<BodyCell>{record.short}</BodyCell>
 	</div>
-	<BodyCell>{record.Type}</BodyCell>
-	<BodyCell>{record.Who}</BodyCell>
+	<BodyCell>{record.type}</BodyCell>
+	<BodyCell>{record.who}</BodyCell>
 	<BodyCell>
 		<div class="flex">
-			{#each record.Tags as tag}
+			{#each record.tags as tag}
 				<Tag>{tag}</Tag>
 			{/each}
 		</div>
 	</BodyCell>
-	<BodyCell>{record.File}</BodyCell>
+	<BodyCell>{record.file}</BodyCell>
 </div>

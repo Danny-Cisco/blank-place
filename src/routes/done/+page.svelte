@@ -3,20 +3,20 @@
 	let data = {
 		records: [
 			{
-				When: '2024-07-25',
-				Short: 'Event A',
-				Type: 'Meeting',
-				Who: 'John Doe',
-				Tags: ['Tag1', 'Tag2'],
-				File: 'file-a.pdf'
+				when: '2024-07-25',
+				short: 'Event A',
+				type: 'Meeting',
+				who: 'John Doe',
+				tags: ['Tag1', 'Tag2'],
+				file: 'file-a.pdf'
 			},
 			{
 				When: '2024-07-26',
-				Short: 'Event B',
-				Type: 'Workshop',
-				Who: 'Jane Smith',
-				Tags: ['Tag3', 'Tag4'],
-				File: 'file-b.pdf'
+				short: 'Event B',
+				type: 'Workshop',
+				who: 'Jane Smith',
+				tags: ['Tag3', 'Tag4'],
+				file: 'file-b.pdf'
 			}
 		]
 	};
